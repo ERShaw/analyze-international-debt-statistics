@@ -40,7 +40,9 @@ ORDER BY total_debt DESC
 LIMIT 1;
 ```
 
-Returns: China, 285793494734.2
+| country_name | total_debt |
+|-|-|
+| China | 285793494734.2 |
 
 ```
 SELECT 
@@ -52,4 +54,6 @@ WHERE debt = (SELECT
              WHERE indicator_code='DT.AMT.DLXF.CD') 
 LIMIT 1;
 ```
-Returns: Timor-Leste | PPG, multilateral (AMT, current US$) | 825000
+| country_name | indicator_name | lowest_repayment | 
+|-|-|-|
+| Timor-Leste | PPG, multilateral (AMT, current US$) | 825000
