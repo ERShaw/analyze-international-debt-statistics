@@ -24,19 +24,23 @@ Below is a description of the table you will be working with:
 
 You will execute SQL queries to answer three questions, as listed in the instructions.
 
+'''
 SELECT COUNT(DISTINCT country_code) as total_distinct_countries 
 FROM public.international_debt;
-
+'''
 Returns: 125 countries
 
+'''
 SELECT country_name, SUM(debt) AS total_debt
 FROM public.international_debt 
 GROUP BY country_name
 ORDER BY total_debt DESC
 LIMIT 1;
+'''
 
 Returns: China, 285793494734.2
 
+'''
 SELECT 
     country_name, indicator_name, debt as lowest_repayment
 FROM international_debt
@@ -45,5 +49,6 @@ WHERE debt = (SELECT
              FROM international_debt
              WHERE indicator_code='DT.AMT.DLXF.CD') 
 LIMIT 1;
+'''
 
 Returns: Timor-Leste | PPG, multilateral (AMT, current US$) | 825000
