@@ -29,6 +29,7 @@ SELECT COUNT(DISTINCT country_code) as total_distinct_countries
 FROM public.international_debt;
 ```
 | total_distinct_countries |
+|-|
 | 125 |
 
 ```
